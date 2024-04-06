@@ -1,0 +1,6 @@
+spring:
+    application:
+        name: java-awssdkv2-secret-manager-example
+    devtools:
+        restart:
+            enabled: true
