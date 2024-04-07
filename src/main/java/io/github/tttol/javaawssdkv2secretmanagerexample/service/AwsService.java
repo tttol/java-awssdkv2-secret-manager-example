@@ -17,7 +17,7 @@ import software.amazon.awssdk.services.secretsmanager.model.SecretsManagerExcept
  * https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javav2/example_code/secretsmanager/src/main/java/com/example/secrets/GetSecretValue.java
  */
 public class AwsService {
-    public String getSecret() {
+    public static String getSecret() {
         var secretName = "sample";
         var region = Region.AP_NORTHEAST_1;
         SecretsManagerClient secretsClient = SecretsManagerClient.builder()
@@ -29,7 +29,7 @@ public class AwsService {
         return value;
     }
 
-    public String getValue(SecretsManagerClient secretsClient, String secretName) {
+    public static String getValue(SecretsManagerClient secretsClient, String secretName) {
         try {
             GetSecretValueRequest valueRequest = GetSecretValueRequest.builder()
                     .secretId(secretName)
